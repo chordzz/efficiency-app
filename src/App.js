@@ -1,23 +1,14 @@
-import logo from './logo.svg';
 import './App.css';
+import TodoListApp from './components/todo-component/todo.component';
+import WeatherApp from './components/weather-component/weather.component';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="App w-screen h-screen flex justify-center items-center">
+      <div className="app-item-container flex flex-row w-[80%] h-[80%] border-4">
+        <WeatherApp />
+        <TodoListApp />
+      </div>
     </div>
   );
 }

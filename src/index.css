@@ -1,13 +1,32 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+.active {
+    @apply text-blue-500 font-bold text-lg py-1 cursor-pointer px-2
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.active span {
+    @apply font-bold bg-blue-500 rounded-full py-1 px-2 m-4 text-sm text-white
+}
+
+.inactive {
+    @apply border-l-2 border-r-2 font-normal px-4 py-1 cursor-pointer text-gray-400
+}
+
+.inactive span {
+    @apply font-bold bg-gray-400 rounded-full py-1 px-2 m-4 text-sm text-white
+}
+
+.cancelled {
+    @apply opacity-30
+}
+
+.weather-icon {
+    @apply text-center
+}
+.weather-icon img{
+    @apply w-[30px] h-[30px]
 }
